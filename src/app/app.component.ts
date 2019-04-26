@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote'
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quotes: string[];
+  quotes = [
+    new Quote(1,'Si ni kenyewe kimejificha kwenye kichwa'),
+    new Quote(2,'Zimenishika yo'),
+    new Quote(3,'Everything you can Imagine is real'),
 
-  constructor(){
-    this.quotes = ["Si ni kenyewe kimejificha kwenye kichwa","Zimenishika yo","Everything you can Imagine is real"];
-  }
+  ]
 }

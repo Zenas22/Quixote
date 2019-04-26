@@ -2,8 +2,9 @@
 <div class="container">
   <h1>Quotes</h1>
   <ul>
-    <li *ngFor='let quote of quotes'>{{quote}}</li>
+    <li *ngFor='let quote of quotes'>{{quote.name}}</li>
   </ul>
+  <p *ngif='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
 </div>
 
 
