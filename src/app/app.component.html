@@ -1,11 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-  <h1>Quotes</h1>
-  <ul>
-    <li *ngFor='let quote of quotes'>{{quote.name}}</li>
-  </ul>
-  <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
-</div>
+<app-quote></app-quote>
 
 
 <router-outlet></router-outlet>
