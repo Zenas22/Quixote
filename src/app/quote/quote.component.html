@@ -1,7 +1,14 @@
 <div class="container">
   <h1>Quotes</h1>
+  <hr>
+
   <ul>
-    <li *ngFor='let quote of quotes'>{{quote.name}}</li>
+    <div *ngFor='let quote of quotes;let i = index'>
+      <li>{{quote.name}}</li>
+      <button (click)='toogleScribble(i)'>Scribble</button>
+      
+      <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
+    </div>
   </ul>
   <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
 </div>

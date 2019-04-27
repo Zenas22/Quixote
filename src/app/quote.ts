@@ -1,3 +1,6 @@
 export class Quote {
-  constructor(public id:number, public name:string){}
+  public showScribble:boolean;
+  constructor(public id:number, public name:string, public scribble:string) {
+    this.showScribble=false
+  }
 }
