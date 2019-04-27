@@ -4,7 +4,8 @@
 
   <ul>
     <div *ngFor='let quote of quotes;let i = index'>
-      <li appHighlight>{{quote.name}}</li>
+      <li id="{{id}}" appHighlight>{{quote.name}}</li>
+      <p>Uploaded {{quote.date|dateCounter}} days ago on {{quote.date|date}}</p>
       <button (click)='toogleScribble(i)'>Scribble</button>
 
       <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
