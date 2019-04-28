@@ -22,6 +22,20 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showScribble = !this.quotes[index].showScribble;
   }
 
+  mostLikes: number = 0
+  bestAuthor: string
+  bestQuote: string
+  checker() {
+    this.mostLikes = 0;
+    for(var z = 0; z < this.quotes.length; z++) {
+      if(this.quotes[z].likes > this.mostLikes){
+        this.mostLikes = this.quotes[z].likes;
+        this.bestQuote = this.quotes[z].quote;
+        this.bestAuthor = this.quotes[z].author;
+      }
+    }
+  }
+
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;

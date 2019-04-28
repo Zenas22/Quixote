@@ -1,32 +1,67 @@
 <div class="container-fluid">
+<section class="clr">
   <div class="jumbotron">
-    <h1>Quotes</h1>
+    <img src="../assets/blackquotes.png" alt="logo">
+  </div>
+  <div class="card text-center w-80">
+    <div class="card-header">
+      <h3>Best Quote</h3>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-primary" type="button" (click)=checker() >Find the best one</button>
+      <div [hidden]="mostLikes <= 0" class="card-text">
+        <h5 class="text-center">{{bestQuote}}</h5>
+        <p class="textcenter">by {{bestAuthor}}</p>
+        <p class="text-left-muted" >With {{mostLikes}} likes</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <br>
+
+<section class="bg">
+
+  <br>
+  <div class="container-fluid mt-4">
+
+    <div class="row justify-content-center">
+      <div class="card-deck">
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div class="col-auto mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h2 class="card-title" id="{{id}}" >Quote</h2>
+
+                <div class="card-text">
+                  <h5 id="{{id}}" >{{quote.quote}}</h5>
+                  <p class="text-right" id="{{id}}" >by <em>{{quote.author}}</em></p>
+                </div>
+                <div class="card-text">
+                  <button (click)='toogleScribble(i)'>Scribble</button>
+
+                  <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-scribble>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+
+    </div>
+    <br>
+
   </div>
   <hr>
+  </div>
+</section>
+<section class="clr">
 
   <div class="container">
     <div class="row">
       <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
     </div>
   </div>
-  <br>
 
-  <br>
-  <div class="container">
-
-    <div class="row">
-      <div *ngFor='let quote of quotes;let i = index'>
-        <div class="card">
-          <h5 id="{{id}}" appHighlight>{{quote.quote}}</h5>
-          <p id="{{id}}" appHighlight>by <em>{{quote.author}}</em></p>
-
-          <button (click)='toogleScribble(i)'>Scribble</button>
-
-          <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-scribble>
-        </div>
-      </div>
-    <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
-    </div>
-
-  </div>
+</section>
 </div>
