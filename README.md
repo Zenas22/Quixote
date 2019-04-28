@@ -1,27 +1,48 @@
-# Quotes
+#Quotes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+##Description
 
-## Development server
+This project was generated with Angular. It is an online website that host different quotes from different people. The quotes can be up voted and down voted and the quote with the most up votes is the one that is highlighted. People can also contribute their own custom quotes as they wish.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+By Zenas Muli
 
-## Code scaffolding
+###BDD
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+|---------------------------------------|---------------------------|------------------------------|
+|Behavior- Our program should handle:   |Input Example	            |Output Example                |
+|:-------------------------------------:|:-------------------------:|:----------------------------:|
+|Enter Quote	                          |An apple a day	            |Display quote                 |
+|:-------------------------------------:|:-------------------------:|:----------------------------:|
+|Delete a quote	                        |Delete Action	            |Deleted Quote                 |
+|:-------------------------------------:|:-------------------------:|:----------------------------:|
+|Like a Quote	Up                        |vote action	              |Likes + 1                     |
+|:-------------------------------------:|:-------------------------:|:----------------------------:|
+|Dislike a Quote	                      |Dislike action	            |Dislikes + 1                  |
+|---------------------------------------|---------------------------|------------------------------|
 
-## Build
+###Setup/Installation Requirements
+1. Open your browser browser.
+2. Load gitHub on your browser.
+3. Search for Zenas22/Quixote repository.
+4. Fork the data onto your own personal repository.
+5. Clone project
+6. run 'ng install' on terminal
+7. run 'ng serve' on terminal
+8. To access the live website, click on this [url](https://Zenas22.github.io/Quixote)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+###Known Bugs
+No Bugs
 
-## Running unit tests
+###Technologies Used
+1. CSS
+2. HTML
+3. Typescript
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+###Dependencies
+Angular CLI
 
-## Running end-to-end tests
+####Contact
+Contact me using: Telephone: +(254) 704-832-108 Email: zenas2294@gmail.com
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+####License and Copyright
+The MIT License (MIT) Copyright (c) 2019 Zenas Muli
