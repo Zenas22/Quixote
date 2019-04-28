@@ -18,10 +18,11 @@
       <div *ngFor='let quote of quotes;let i = index'>
         <div class="card">
           <h5 id="{{id}}" appHighlight>{{quote.quote}}</h5>
+          <p id="{{id}}" appHighlight>by <em>{{quote.author}}</em></p>
 
           <button (click)='toogleScribble(i)'>Scribble</button>
 
-          <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
+          <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-scribble>
         </div>
       </div>
     <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>

@@ -1,3 +1,10 @@
-<p>{{quote.author}}</p>
-<p>Uploaded {{quote.completeDate|dateCount}} days ago on {{quote.completeDate|date}}</p>
-<button class="btn btn-danger" (click) = 'quoteDelete(true)'>Delete</button>
+<div class="scribble">
+  <p>Uploaded by {{quote.name}} {{quote.completeDate|dateCount}} days ago on {{quote.completeDate|date}}</p>
+
+  <p>Likes: {{quote.likes}}</p>
+  <p>Dislikes: {{quote.dislikes}}</p>
+
+  <button type="button" class="btn" (click)='quoteLike(quote)'>Thumbs up</button>
+  <button type="button" class="btn" (click)='quoteDislike(quote)'>Thumbs down</button>
+  <button class="btn btn-danger" (click) = 'quoteDelete(true)'>Delete</button>
+</div>

@@ -11,6 +11,14 @@ export class QuoteScribbleComponent implements OnInit {
   @Input() quote:Quote;
   @Output() isComplete= new EventEmitter<boolean>();
 
+  quoteLike(quote){
+    quote.likes = quote.likes + 1;
+  }
+
+  quoteDislike(quote){
+    quote.dislikes = quote.dislikes + 1;
+  }
+
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
