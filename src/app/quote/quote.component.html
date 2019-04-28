@@ -1,20 +1,31 @@
 <div class="container-fluid">
-  <div class="well">
+  <div class="jumbotron">
     <h1>Quotes</h1>
   </div>
   <hr>
 
-  <div class="row">
-    <div *ngFor='let quote of quotes;let i = index'>
-      <div class="card">
-        <h5 id="{{id}}" appHighlight>{{quote.name}}</h5>
+  <div class="container">
+    <div class="row">
+      <app-quote-form (addQuote)="addNewQuote($event)" ></app-quote-form>
+    </div>
+  </div>
+  <br>
 
-        <button (click)='toogleScribble(i)'>Scribble</button>
+  <br>
+  <div class="container">
 
-        <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
+    <div class="row">
+      <div *ngFor='let quote of quotes;let i = index'>
+        <div class="card">
+          <h5 id="{{id}}" appHighlight>{{quote.quote}}</h5>
+
+          <button (click)='toogleScribble(i)'>Scribble</button>
+
+          <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
+        </div>
       </div>
+    <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
     </div>
 
-  <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
   </div>
 </div>
