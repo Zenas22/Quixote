@@ -1,2 +1,3 @@
 <p>{{quote.scribble}}</p>
-<button (click) = 'quoteComplete(true)'>Delete</button>
+<p>Uploaded {{quote.completeDate|dateCount}} days ago on {{quote.completeDate|date}}</p>
+<button class="btn btn-danger" (click) = 'quoteDelete(true)'>Delete</button>

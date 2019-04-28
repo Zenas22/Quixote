@@ -18,15 +18,21 @@ export class QuoteComponent implements OnInit {
 
   ]
 
-  completeQuote(isComplete,index){
-    if (isComplete){
-      this.quotes.splice(index,1);
-    }
-  }
-
   toogleScribble(index){
     this.quotes[index].showScribble = !this.quotes[index].showScribble;
   }
+
+  deleteQuote(isComplete,index){
+    if (isComplete){
+      let toDelete = confirm (`Are you sure you want to delete ${this.quotes[index].name}`)
+
+      if (toDelete){
+        this.quotes.splice(index,1);
+      }
+    }
+  }
+
+
 
   constructor() { }
 

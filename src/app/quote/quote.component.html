@@ -1,15 +1,20 @@
-<div class="container">
-  <h1>Quotes</h1>
+<div class="container-fluid">
+  <div class="well">
+    <h1>Quotes</h1>
+  </div>
   <hr>
 
-
+  <div class="row">
     <div *ngFor='let quote of quotes;let i = index'>
-      <h4 id="{{id}}" appHighlight>{{quote.name}}</h4>
-      <p>Uploaded {{quote.completeDate|dateCount}} days ago on {{quote.completeDate|date}}</p>
-      <button (click)='toogleScribble(i)'>Scribble</button>
+      <div class="card">
+        <h5 id="{{id}}" appHighlight>{{quote.name}}</h5>
 
-      <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
+        <button (click)='toogleScribble(i)'>Scribble</button>
+
+        <app-quote-scribble *ngIf="quote.showScribble" [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quote-scribble>
+      </div>
     </div>
 
   <p *ngIf='quotes.length > 5'>Please delete the quotes that have not been upvoted</p>
+  </div>
 </div>
