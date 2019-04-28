@@ -2,8 +2,12 @@
   background-image:url(/assets/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .clr{
+  background-color: #FFAD01;
+}
+
+.container{
   background-color: #FFAD01;
 }
