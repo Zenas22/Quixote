@@ -9,12 +9,12 @@ import {Quote} from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-    new Quote(1, 'Si ni kenyewe kimejificha kwenye kichwa', 'Zzero Sufuri', 'Zeus', new Date(2019,1,24), 0, 0),
-    new Quote(2, 'Zimenishika yo', 'Zzero Sufuri', 'Zeus', new Date(2019,2,10), 0, 0),
+    new Quote(1, 'I’ll stop wearing black when they make a darker color.', 'Wednesday Addams', 'Zeus', new Date(2019,1,24), 0, 0),
+    new Quote(2, 'Healing begins where the wound was made.', 'Alice Walker', 'Zeus', new Date(2019,2,10), 0, 0),
     new Quote(3, 'Everything you can Imagine is real', 'Pablo Picasso', 'Zeus', new Date(2019,1,30), 0, 0),
     new Quote(4, 'Tuendelee ama tusiendelee', 'Nyashinski', 'Zeus', new Date(2019,2,12), 0, 0),
-    new Quote(5, 'Kawia ufike', 'Mhenga Mhenguzi', 'Zeus', new Date(2019,3,22), 0, 0),
-    new Quote(6, 'Zubaa zubaa utapata mwana si wako', 'Mhenga Mhenguzi', 'Zeus', new Date(2019,4,23), 0, 0),
+    new Quote(5, 'You can’t separate peace from freedom because no one can be at peace unless he has his freedom.', 'Malcolm X', 'Zeus', new Date(2019,3,22), 0, 0),
+    new Quote(6, 'As long as we are not ourselves, we will try to be what other people are.', 'Malidoma Patrice Somé', 'Zeus', new Date(2019,4,23), 0, 0),
 
   ]
 
@@ -25,7 +25,7 @@ export class QuoteComponent implements OnInit {
   mostLikes: number = 0
   bestAuthor: string
   bestQuote: string
-  checker() {
+  find() {
     this.mostLikes = 0;
     for(var z = 0; z < this.quotes.length; z++) {
       if(this.quotes[z].likes > this.mostLikes){

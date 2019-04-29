@@ -9,11 +9,11 @@ export class HighlightDirective {
   @Input() quote:Quote;
 
   constructor(private elem: ElementRef) {
-    this.elem.nativeElement.style.backgroundColor = 'None';
+    this.elem.nativeElement.style.backgroundColor = 'Red';
   }
 
   @HostListener('click') onClicks() {
-    this.highlight('red');
+    this.highlight('None');
   }
 
   @HostListener('dblclick') onDoubleClicks() {
