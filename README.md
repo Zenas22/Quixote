@@ -12,11 +12,8 @@ By Zenas Muli
 |Behavior- Our program should handle:   |Input Example	            |Output Example                |
 |:-------------------------------------:|:-------------------------:|:----------------------------:|
 |Enter Quote	                          |An apple a day	            |Display quote                 |
-
 |Delete a quote	                        |Delete Action	            |Deleted Quote                 |
-
 |Like a Quote	Up                        |vote action	              |Likes + 1                     |
-
 |Dislike a Quote	                      |Dislike action	            |Dislikes + 1                  |
 
 
